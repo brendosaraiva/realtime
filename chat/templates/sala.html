@@ -1,15 +1,15 @@
-{% load_bootstrap4 %}
+{% load bootstrap4 %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
     <title>Geek Chat</title>
-    {% nootstrap_css %}
+    {% bootstrap_css %}
 </head>
 <body>
     <div class="container">
         <textarea id="sala" cols="70" rows="15"></textarea><br/>
-        <input id="texto" type="text" size="100"/><br/>
+        <input id="texto" type="text" size="65"/><br/>
         {% buttons %}
             <input id="botao" type="button" value="Enviar">
         {% endbuttons %}
@@ -44,7 +44,7 @@
     document.querySelector('#botao').onclick = function(e){
         var mensagemInput = document.querySelector('#texto');
         var mensagem = mensagemInput.value;
-        chatSocket.send(JSON.stringfy({
+        chatSocket.send(JSON.stringify({
             'mensagem': mensagem
         }));
         mensagemInput.value = '';

@@ -9,6 +9,6 @@ from .consumers import ChatConsumer
 # ChatConsumer -> Faz a ligação (ponte) entre o navegador e a aplicação
 
 # (?P<nome_sala>\w+/$) -> É uma expressão regular que define o padrão, ao ser criada uma nova sala
-websocket_urlpatterns = {
-    re_path(r"ws/chat/(?P<nome_sala>\w+/$)", ChatConsumer),
-}
+websocket_urlpatterns = [
+    re_path(r"ws/chat/(?P<nome_sala>\w+)/$", ChatConsumer),
+]

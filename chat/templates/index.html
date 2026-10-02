@@ -1,4 +1,4 @@
-{% load_bootstrap4 %}
+{% load bootstrap4 %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,8 +15,8 @@
         {% endbuttons %}
     </div>
     <script>
-        documents.querySelector('#nome_sala').focus();
-        documents.querySelector('#nome_sala').onkeyup = function(e){
+        document.querySelector('#nome_sala').focus();
+        document.querySelector('#nome_sala').onkeyup = function(e){
             if(e.keyCode === 13){
                 document.querySelector('#botao').click();
             }

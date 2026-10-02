@@ -17,7 +17,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
         # Entrar na sala
         await self.channel_layer.group_add(
             self.room_group_name,
-            self.room_name
+            self.channel_name
         )
 
         await self.accept()
